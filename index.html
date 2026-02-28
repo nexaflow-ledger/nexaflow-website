@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NexaFlow — Privacy-First Cryptocurrency</title>
+  <meta name="description" content="NexaFlow is a next-generation cryptocurrency with confidential transactions, ring signatures, and stealth addresses. Built for privacy, speed, and real-world use." />
+  <meta name="keywords" content="NexaFlow, cryptocurrency, privacy coin, confidential transactions, ring signatures, stealth addresses, blockchain, NXF" />
+  <meta property="og:title" content="NexaFlow — Privacy-First Cryptocurrency" />
+  <meta property="og:description" content="Scalable, private, and secure digital currency with sub-5s finality and enterprise-grade cryptography." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/og-image.png" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ════════════ NAVIGATION ════════════ -->
+  <header class="site-header" id="header">
+    <nav class="nav container">
+      <a href="#" class="nav__logo" aria-label="NexaFlow home">
+        <svg class="nav__logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2"/>
+          <path d="M10 22V10l12 12V10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>NexaFlow</span>
+      </a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#privacy">Privacy</a></li>
+        <li><a href="#tokenomics">Tokenomics</a></li>
+        <li><a href="#staking">Staking</a></li>
+        <li><a href="#technology">Technology</a></li>
+        <li><a href="#get-started">Get Started</a></li>
+      </ul>
+      <div class="nav__actions">
+        <a href="https://github.com/nexaflow-ledger/nexaflow-src" class="btn btn--outline btn--sm" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 00-3.8 23.38c.6.12.83-.26.83-.57v-2.23c-3.34.73-4.04-1.42-4.04-1.42a3.18 3.18 0 00-1.33-1.76c-1.09-.74.08-.73.08-.73a2.52 2.52 0 011.84 1.24 2.56 2.56 0 003.5 1 2.56 2.56 0 01.76-1.6c-2.67-.3-5.47-1.33-5.47-5.93a4.64 4.64 0 011.24-3.22 4.3 4.3 0 01.12-3.18s1-.33 3.3 1.23a11.38 11.38 0 016 0c2.3-1.56 3.3-1.23 3.3-1.23a4.3 4.3 0 01.12 3.18 4.64 4.64 0 011.24 3.22c0 4.61-2.8 5.63-5.48 5.92a2.87 2.87 0 01.82 2.23v3.29c0 .31.22.7.83.57A12 12 0 0012 .3z"/></svg>
+          GitHub
+        </a>
+        <a href="assets/WHITEPAPER.pdf" class="btn btn--primary btn--sm" target="_blank" rel="noopener">White Paper</a>
+        <button class="nav__burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ════════════ HERO ════════════ -->
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__glow hero__glow--1"></div>
+        <div class="hero__glow hero__glow--2"></div>
+        <div class="hero__grid"></div>
+      </div>
+      <div class="container hero__inner">
+        <div class="hero__badge">Open Source &middot; MIT Licensed</div>
+        <h1 class="hero__title">
+          Private transactions.<br/>
+          <span class="gradient-text">Instant finality.</span>
+        </h1>
+        <p class="hero__subtitle">
+          NexaFlow is a next-generation cryptocurrency that keeps your financial life private.
+          Confidential amounts, unlinkable payments, and sub-5-second finality &mdash; all powered
+          by Cython-optimized cryptography and Byzantine-fault-tolerant consensus.
+        </p>
+        <div class="hero__cta">
+          <a href="#get-started" class="btn btn--primary btn--lg">Get Started</a>
+          <a href="#features" class="btn btn--ghost btn--lg">Learn More &darr;</a>
+        </div>
+        <div class="hero__stats">
+          <div class="hero__stat">
+            <span class="hero__stat-value">~1,000</span>
+            <span class="hero__stat-label">TPS throughput</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-value">&lt; 5s</span>
+            <span class="hero__stat-label">Finality</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-value">940+</span>
+            <span class="hero__stat-label">Tests passing</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-value">100B</span>
+            <span class="hero__stat-label">NXF supply</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════ FEATURES ════════════ -->
+    <section class="section features" id="features">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__tag">Why NexaFlow</span>
+          <h2 class="section__title">Built for the real world</h2>
+          <p class="section__subtitle">
+            Every piece of NexaFlow was designed with practical, everyday use in mind &mdash;
+            from the cryptography all the way up to the developer experience.
+          </p>
+        </div>
+        <div class="features__grid">
+
+          <div class="feature-card" data-aos>
+            <div class="feature-card__icon feature-card__icon--purple">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+            </div>
+            <h3>Confidential Transactions</h3>
+            <p>Transaction amounts are hidden behind Pedersen commitments and verified with zero-knowledge range proofs. Nobody can see how much you sent or received.</p>
+          </div>
+
+          <div class="feature-card" data-aos>
+            <div class="feature-card__icon feature-card__icon--blue">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+            </div>
+            <h3>Instant Finality</h3>
+            <p>The RPCA consensus algorithm provides deterministic finality in under 5 seconds. No more waiting for block confirmations &mdash; your transaction is final, period.</p>
+          </div>
+
+          <div class="feature-card" data-aos>
+            <div class="feature-card__icon feature-card__icon--teal">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3>Ring Signatures</h3>
+            <p>LSAG ring signatures let you prove authorization without revealing which key actually signed. Your identity stays hidden in a crowd of decoys.</p>
+          </div>
+
+          <div class="feature-card" data-aos>
+            <div class="feature-card__icon feature-card__icon--orange">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <h3>Stealth Addresses</h3>
+            <p>Every payment generates a unique one-time address. Even if someone knows your public key, they can't link your transactions together on-chain.</p>
+          </div>
+
+          <div class="feature-card" data-aos>
+            <div class="feature-card__icon feature-card__icon--rose">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h3>High Performance</h3>
+            <p>Core cryptographic operations are compiled to native C via Cython. The result: ~5,000 range proofs per second and ~1,000 transactions per second on commodity hardware.</p>
+          </div>
+
+          <div class="feature-card" data-aos>
+            <div class="feature-card__icon feature-card__icon--green">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <h3>Trust Lines &amp; DEX</h3>
+            <p>Issue IOUs, set credit limits, and trade across currencies with the built-in decentralized exchange and multi-hop payment path finding.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════ PRIVACY ════════════ -->
+    <section class="section section--dark privacy" id="privacy">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__tag">Privacy</span>
+          <h2 class="section__title">Your money. Your business.</h2>
+          <p class="section__subtitle">
+            NexaFlow was built from scratch with privacy at its core &mdash; not bolted on as an afterthought.
+            Here's what happens when you send a confidential payment.
+          </p>
+        </div>
+
+        <div class="privacy__flow">
+          <div class="privacy__step" data-aos>
+            <div class="privacy__step-num">1</div>
+            <div class="privacy__step-content">
+              <h3>Stealth Address Derivation</h3>
+              <p>The sender derives a unique one-time address from the recipient's public view and spend keys. This address appears only once on the ledger and can't be linked back to the recipient.</p>
+            </div>
+          </div>
+          <div class="privacy__step" data-aos>
+            <div class="privacy__step-num">2</div>
+            <div class="privacy__step-content">
+              <h3>Amount Commitment</h3>
+              <p>The payment amount is sealed inside a Pedersen commitment: <code>C = v&middot;G + b&middot;H</code>. Validators can verify the math checks out without ever knowing the actual value.</p>
+            </div>
+          </div>
+          <div class="privacy__step" data-aos>
+            <div class="privacy__step-num">3</div>
+            <div class="privacy__step-content">
+              <h3>Range Proof</h3>
+              <p>A zero-knowledge range proof proves the committed amount is non-negative. This prevents anyone from creating coins out of thin air while keeping the amount completely hidden.</p>
+            </div>
+          </div>
+          <div class="privacy__step" data-aos>
+            <div class="privacy__step-num">4</div>
+            <div class="privacy__step-content">
+              <h3>Ring Signature</h3>
+              <p>The sender signs the transaction using an LSAG ring signature over a set of decoy public keys. Nobody can tell which member of the ring is the actual signer.</p>
+            </div>
+          </div>
+          <div class="privacy__step" data-aos>
+            <div class="privacy__step-num">5</div>
+            <div class="privacy__step-content">
+              <h3>Key Image &amp; Broadcast</h3>
+              <p>A deterministic key image prevents double-spending without revealing who spent. The transaction is broadcast to the network, validated, and included in the next consensus round.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="privacy__result">
+          <div class="privacy__result-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <div>
+            <h3>What the world sees</h3>
+            <p>A one-time address, a commitment (not an amount), a valid proof, and a ring signature. That's it. No sender identity, no recipient identity, no transaction amount &mdash; just cryptographic proof that everything adds up.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════ TOKENOMICS ════════════ -->
+    <section class="section tokenomics" id="tokenomics">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__tag">Tokenomics</span>
+          <h2 class="section__title">Designed to hold value</h2>
+          <p class="section__subtitle">
+            NXF uses a deflationary fee-burning model. Every transaction permanently reduces the supply,
+            while staking interest is the only way new coins enter circulation.
+          </p>
+        </div>
+
+        <div class="tokenomics__grid">
+          <div class="tokenomics__card tokenomics__card--main" data-aos>
+            <h3>Supply Mechanics</h3>
+            <div class="tokenomics__rules">
+              <div class="tokenomics__rule">
+                <div class="tokenomics__rule-icon tokenomics__rule-icon--mint">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v8m-4-4h8"/></svg>
+                </div>
+                <div>
+                  <strong>100 billion NXF</strong>
+                  <span>Minted at genesis &mdash; one-time initial supply</span>
+                </div>
+              </div>
+              <div class="tokenomics__rule">
+                <div class="tokenomics__rule-icon tokenomics__rule-icon--burn">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 14l-4-4h3V8h2v4h3l-4 4z"/></svg>
+                </div>
+                <div>
+                  <strong>Fee Burning</strong>
+                  <span>Every transaction fee is permanently destroyed</span>
+                </div>
+              </div>
+              <div class="tokenomics__rule">
+                <div class="tokenomics__rule-icon tokenomics__rule-icon--stake">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg>
+                </div>
+                <div>
+                  <strong>Interest Minting</strong>
+                  <span>Staking rewards are newly minted when positions mature</span>
+                </div>
+              </div>
+              <div class="tokenomics__rule">
+                <div class="tokenomics__rule-icon tokenomics__rule-icon--lock">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                </div>
+                <div>
+                  <strong>No Other Minting</strong>
+                  <span>No block rewards, no inflation schedule, no admin mint</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tokenomics__card" data-aos>
+            <h3>Economic Dynamics</h3>
+            <ul class="tokenomics__dynamics">
+              <li>
+                <span class="tokenomics__arrow tokenomics__arrow--down">&darr;</span>
+                <div>
+                  <strong>Deflationary pressure</strong>
+                  <p>Every transaction shrinks the total supply through fee burning. Higher network activity means faster deflation.</p>
+                </div>
+              </li>
+              <li>
+                <span class="tokenomics__arrow tokenomics__arrow--up">&uarr;</span>
+                <div>
+                  <strong>Inflationary pressure</strong>
+                  <p>Staking interest adds new coins. The rate adjusts dynamically based on how much NXF is staked network-wide.</p>
+                </div>
+              </li>
+              <li>
+                <span class="tokenomics__arrow tokenomics__arrow--balance">&harr;</span>
+                <div>
+                  <strong>Self-balancing equilibrium</strong>
+                  <p>Under normal activity, burn rate exceeds minting &mdash; making NXF structurally deflationary over time.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════ STAKING ════════════ -->
+    <section class="section section--dark staking" id="staking">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__tag">Staking</span>
+          <h2 class="section__title">Earn while you hold</h2>
+          <p class="section__subtitle">
+            Lock your NXF to earn interest. Longer commitments mean higher yields &mdash;
+            and the dynamic multiplier adjusts rates based on network demand.
+          </p>
+        </div>
+
+        <div class="staking__tiers">
+          <div class="staking__tier" data-aos>
+            <div class="staking__tier-header">
+              <span class="staking__tier-name">Flexible</span>
+              <span class="staking__tier-lock">No lock</span>
+            </div>
+            <div class="staking__tier-apy">2<span>%</span></div>
+            <p class="staking__tier-desc">Base APY</p>
+            <ul class="staking__tier-perks">
+              <li>Withdraw any time</li>
+              <li>No penalty</li>
+              <li>Compound manually</li>
+            </ul>
+          </div>
+
+          <div class="staking__tier" data-aos>
+            <div class="staking__tier-header">
+              <span class="staking__tier-name">30 Days</span>
+              <span class="staking__tier-lock">30-day lock</span>
+            </div>
+            <div class="staking__tier-apy">5<span>%</span></div>
+            <p class="staking__tier-desc">Base APY</p>
+            <ul class="staking__tier-perks">
+              <li>Higher base yield</li>
+              <li>Early cancel available</li>
+              <li>Penalty decreases over time</li>
+            </ul>
+          </div>
+
+          <div class="staking__tier staking__tier--featured" data-aos>
+            <div class="staking__tier-badge">Popular</div>
+            <div class="staking__tier-header">
+              <span class="staking__tier-name">90 Days</span>
+              <span class="staking__tier-lock">90-day lock</span>
+            </div>
+            <div class="staking__tier-apy">8<span>%</span></div>
+            <p class="staking__tier-desc">Base APY</p>
+            <ul class="staking__tier-perks">
+              <li>Great risk/reward balance</li>
+              <li>Dynamic multiplier up to 2&times;</li>
+              <li>Early cancel with time decay</li>
+            </ul>
+          </div>
+
+          <div class="staking__tier" data-aos>
+            <div class="staking__tier-header">
+              <span class="staking__tier-name">180 Days</span>
+              <span class="staking__tier-lock">180-day lock</span>
+            </div>
+            <div class="staking__tier-apy">12<span>%</span></div>
+            <p class="staking__tier-desc">Base APY</p>
+            <ul class="staking__tier-perks">
+              <li>Premium returns</li>
+              <li>Longer commitment bonus</li>
+              <li>Reduced penalty at maturity</li>
+            </ul>
+          </div>
+
+          <div class="staking__tier" data-aos>
+            <div class="staking__tier-header">
+              <span class="staking__tier-name">365 Days</span>
+              <span class="staking__tier-lock">1-year lock</span>
+            </div>
+            <div class="staking__tier-apy">15<span>%</span></div>
+            <p class="staking__tier-desc">Base APY</p>
+            <ul class="staking__tier-perks">
+              <li>Maximum yield tier</li>
+              <li>Up to 2&times; demand multiplier</li>
+              <li>Strongest network security</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="staking__note">
+          <p><strong>Dynamic APY:</strong> Base rates are scaled by a demand multiplier (0.5&times;&ndash;2&times;) based on the network staking ratio. When fewer tokens are staked, the multiplier rises to attract capital. Target staking ratio: 30%.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════ TECHNOLOGY ════════════ -->
+    <section class="section technology" id="technology">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__tag">Under the Hood</span>
+          <h2 class="section__title">Serious engineering</h2>
+          <p class="section__subtitle">
+            NexaFlow is built on proven cryptographic primitives and a clean, auditable codebase.
+            Here's what powers it behind the scenes.
+          </p>
+        </div>
+
+        <div class="tech__grid">
+          <div class="tech__card" data-aos>
+            <h3>RPCA Consensus</h3>
+            <p>Byzantine-fault-tolerant consensus inspired by the Ripple Protocol Consensus Algorithm. Validators propose, vote with escalating thresholds (50% &rarr; 80%), and finalize &mdash; typically in 2&ndash;4 seconds.</p>
+            <div class="tech__detail">
+              <code>n &ge; 3f+1 validators &middot; round-robin leader &middot; equivocation detection</code>
+            </div>
+          </div>
+
+          <div class="tech__card" data-aos>
+            <h3>Cython Core</h3>
+            <p>Performance-critical modules &mdash; cryptography, transactions, ledger state, consensus, and privacy primitives &mdash; are written in Cython and compiled to native C for maximum throughput.</p>
+            <div class="tech__detail">
+              <code>crypto_utils.pyx &middot; transaction.pyx &middot; ledger.pyx &middot; privacy.pyx</code>
+            </div>
+          </div>
+
+          <div class="tech__card" data-aos>
+            <h3>secp256k1 Cryptography</h3>
+            <p>All digital signatures use the same elliptic curve as Bitcoin. ECDSA for authentication, Pedersen commitments for amount hiding, and BLAKE2b-256 for all hashing.</p>
+            <div class="tech__detail">
+              <code>ECDSA &middot; Pedersen &middot; LSAG &middot; Bulletproofs &middot; BLAKE2b</code>
+            </div>
+          </div>
+
+          <div class="tech__card" data-aos>
+            <h3>Mutual TLS Networking</h3>
+            <p>Peer-to-peer communication is secured with mutual TLS authentication. Each node presents a certificate tied to its validator identity, preventing MITM and Sybil attacks.</p>
+            <div class="tech__detail">
+              <code>mTLS &middot; JSON-over-TCP &middot; gossip protocol &middot; rate limiting</code>
+            </div>
+          </div>
+
+          <div class="tech__card" data-aos>
+            <h3>REST API</h3>
+            <p>Every node exposes a full HTTP API built on aiohttp. Submit transactions, query balances, inspect the order book, and manage staking &mdash; all through clean REST endpoints.</p>
+            <div class="tech__detail">
+              <code>aiohttp &middot; API-key auth &middot; CORS &middot; token-bucket rate limits</code>
+            </div>
+          </div>
+
+          <div class="tech__card" data-aos>
+            <h3>SQLite Persistence</h3>
+            <p>Ledger state is durably stored in SQLite with optional in-memory mode. The storage layer handles accounts, trust lines, closed ledgers, and confidential outputs.</p>
+            <div class="tech__detail">
+              <code>accounts &middot; trust lines &middot; UTXO index &middot; key images &middot; ledger headers</code>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════ CODE SAMPLE ════════════ -->
+    <section class="section section--dark code-section">
+      <div class="container">
+        <div class="code-section__inner">
+          <div class="code-section__text">
+            <span class="section__tag">Developer Experience</span>
+            <h2>Simple, readable Python</h2>
+            <p>
+              NexaFlow's API is designed for humans. Create wallets, send confidential payments, and scan for
+              incoming funds in just a few lines of code. The heavy cryptography happens in Cython under the hood.
+            </p>
+            <ul class="code-section__highlights">
+              <li>Type-hinted, well-documented API</li>
+              <li>940+ tests across 31 modules</li>
+              <li>Works with Python 3.9&ndash;3.13</li>
+              <li>PyQt6 desktop GUI included</li>
+            </ul>
+          </div>
+          <div class="code-section__block">
+            <div class="code-block">
+              <div class="code-block__header">
+                <span class="code-block__dot"></span>
+                <span class="code-block__dot"></span>
+                <span class="code-block__dot"></span>
+                <span class="code-block__title">confidential_payment.py</span>
+              </div>
+              <pre><code><span class="kw">from</span> nexaflow_core.wallet <span class="kw">import</span> Wallet
+<span class="kw">from</span> nexaflow_core.ledger <span class="kw">import</span> Ledger
+
+<span class="cm"># Create wallets</span>
+sender    = Wallet.create()
+recipient = Wallet.create()
+
+<span class="cm"># Initialize ledger</span>
+ledger = Ledger(
+    total_supply=<span class="num">100_000_000_000.0</span>,
+    genesis_account=<span class="str">"rGenesis"</span>
+)
+ledger.create_account(sender.address, <span class="num">1_000.0</span>)
+
+<span class="cm"># Send a confidential payment</span>
+tx = sender.sign_confidential_payment(
+    recipient.view_public_key,
+    recipient.spend_public_key,
+    amount=<span class="num">50.0</span>,
+    fee=<span class="num">0.001</span>,
+)
+ledger.apply_payment(tx)
+
+<span class="cm"># Recipient scans for their outputs</span>
+found = recipient.scan_confidential_outputs(ledger)
+<span class="cm"># Only the recipient can see the amount</span></code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════ GET STARTED ════════════ -->
+    <section class="section get-started" id="get-started">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__tag">Quick Start</span>
+          <h2 class="section__title">Up and running in minutes</h2>
+          <p class="section__subtitle">
+            NexaFlow runs on any system with Python 3.9+ and a C compiler.
+            Clone, install, and launch your first node.
+          </p>
+        </div>
+
+        <div class="steps">
+          <div class="step" data-aos>
+            <div class="step__number">1</div>
+            <div class="step__content">
+              <h3>Clone &amp; Install</h3>
+              <div class="code-block code-block--compact">
+                <pre><code>git clone https://github.com/nexaflow-ledger/nexaflow-src.git
+cd nexaflow-src
+
+python -m venv .venv && source .venv/bin/activate
+pip install -e ".[dev]"
+python setup.py build_ext --inplace</code></pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="step" data-aos>
+            <div class="step__number">2</div>
+            <div class="step__content">
+              <h3>Run a Node</h3>
+              <div class="code-block code-block--compact">
+                <pre><code>python run_node.py --node-id alice --port 9001</code></pre>
+              </div>
+              <p>That's it. You've got a validator node running locally with the interactive CLI.</p>
+            </div>
+          </div>
+
+          <div class="step" data-aos>
+            <div class="step__number">3</div>
+            <div class="step__content">
+              <h3>Launch a Test Network</h3>
+              <div class="code-block code-block--compact">
+                <pre><code><span class="cm"># Two-node network</span>
+./scripts/start_both.sh
+
+<span class="cm"># Or use Docker for a three-node cluster</span>
+make docker-up</code></pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="step" data-aos>
+            <div class="step__number">4</div>
+            <div class="step__content">
+              <h3>Use the API</h3>
+              <div class="code-block code-block--compact">
+                <pre><code>curl http://localhost:8080/status
+curl http://localhost:8080/balance/rAliceAddress
+curl -X POST http://localhost:8080/tx/payment \
+  -H "Content-Type: application/json" \
+  -H "X-API-Key: YOUR_KEY" \
+  -d '{"to": "rBob", "amount": 100}'</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="get-started__links">
+          <a href="https://github.com/nexaflow-ledger/nexaflow-src" class="btn btn--primary btn--lg" target="_blank" rel="noopener">
+            View on GitHub
+          </a>
+          <a href="https://github.com/nexaflow-ledger/nexaflow-src/blob/main/README.md" class="btn btn--outline btn--lg" target="_blank" rel="noopener">
+            Full Documentation
+          </a>
+          <a href="assets/WHITEPAPER.pdf" class="btn btn--outline btn--lg" target="_blank" rel="noopener">
+            Read the White Paper
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════ ROADMAP ════════════ -->
+    <section class="section section--dark roadmap" id="roadmap">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__tag">Roadmap</span>
+          <h2 class="section__title">What's next</h2>
+        </div>
+        <div class="roadmap__timeline">
+          <div class="roadmap__item roadmap__item--done" data-aos>
+            <div class="roadmap__dot"></div>
+            <div class="roadmap__card">
+              <span class="roadmap__phase">Phase 1 &mdash; Foundation</span>
+              <h3>Core Protocol</h3>
+              <p>Cython-optimized cryptography, RPCA consensus, confidential transactions, trust lines, DEX engine, staking, wallet encryption, REST API, Docker deployment, 940+ tests.</p>
+              <span class="roadmap__status roadmap__status--done">Completed</span>
+            </div>
+          </div>
+          <div class="roadmap__item roadmap__item--active" data-aos>
+            <div class="roadmap__dot"></div>
+            <div class="roadmap__card">
+              <span class="roadmap__phase">Phase 2 &mdash; Launch</span>
+              <h3>Genesis &amp; Validator Onboarding</h3>
+              <p>Public genesis event, initial validator set, official desktop and CLI wallets, security audit, and comprehensive developer documentation.</p>
+              <span class="roadmap__status roadmap__status--active">In Progress</span>
+            </div>
+          </div>
+          <div class="roadmap__item" data-aos>
+            <div class="roadmap__dot"></div>
+            <div class="roadmap__card">
+              <span class="roadmap__phase">Phase 3 &mdash; Growth</span>
+              <h3>Ecosystem Expansion</h3>
+              <p>Mobile wallets, exchange listings, analytics tooling, enhanced DEX features, and community governance proposals.</p>
+              <span class="roadmap__status">Planned</span>
+            </div>
+          </div>
+          <div class="roadmap__item" data-aos>
+            <div class="roadmap__dot"></div>
+            <div class="roadmap__card">
+              <span class="roadmap__phase">Phase 4 &mdash; Scale</span>
+              <h3>Advanced Features</h3>
+              <p>Sharding for horizontal scalability, private smart contracts, cross-chain bridges, and institutional-grade APIs.</p>
+              <span class="roadmap__status">Planned</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════ CTA ════════════ -->
+    <section class="section cta">
+      <div class="container">
+        <div class="cta__inner">
+          <h2>Ready to build with NexaFlow?</h2>
+          <p>Join the community, run a node, and help shape the future of private digital payments.</p>
+          <div class="cta__actions">
+            <a href="https://github.com/nexaflow-ledger/nexaflow-src" class="btn btn--primary btn--lg" target="_blank" rel="noopener">Get the Code</a>
+            <a href="https://github.com/nexaflow-ledger/nexaflow-src/blob/main/CONTRIBUTING.md" class="btn btn--outline btn--lg" target="_blank" rel="noopener">Contribute</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ════════════ FOOTER ════════════ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#" class="nav__logo" aria-label="NexaFlow home">
+          <svg class="nav__logo-icon" width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2"/>
+            <path d="M10 22V10l12 12V10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>NexaFlow</span>
+        </a>
+        <p>Privacy-first cryptocurrency with confidential transactions and instant finality.</p>
+      </div>
+      <div class="footer__links">
+        <div class="footer__col">
+          <h4>Protocol</h4>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#privacy">Privacy</a></li>
+            <li><a href="#tokenomics">Tokenomics</a></li>
+            <li><a href="#staking">Staking</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Developers</h4>
+          <ul>
+            <li><a href="#get-started">Quick Start</a></li>
+            <li><a href="https://github.com/nexaflow-ledger/nexaflow-src/blob/main/README.md" target="_blank" rel="noopener">Documentation</a></li>
+            <li><a href="https://github.com/nexaflow-ledger/nexaflow-src" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="assets/WHITEPAPER.pdf" target="_blank" rel="noopener">White Paper</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Community</h4>
+          <ul>
+            <li><a href="https://github.com/nexaflow-ledger/nexaflow-src/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">Contributing</a></li>
+            <li><a href="https://github.com/nexaflow-ledger/nexaflow-src/blob/main/SECURITY.md" target="_blank" rel="noopener">Security Policy</a></li>
+            <li><a href="https://github.com/nexaflow-ledger/nexaflow-src/blob/main/CHANGELOG.md" target="_blank" rel="noopener">Changelog</a></li>
+            <li><a href="https://github.com/nexaflow-ledger/nexaflow-src/blob/main/LICENSE" target="_blank" rel="noopener">License (MIT)</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <p>&copy; 2026 NexaFlow Contributors. Open-source under the MIT License.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
