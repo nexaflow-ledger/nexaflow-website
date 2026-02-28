@@ -5,6 +5,17 @@
 (function () {
   'use strict';
 
+  // ── Theme toggle ───────────────────────────────────────
+  var themeToggle = document.getElementById('themeToggle');
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+      var current = document.documentElement.getAttribute('data-theme');
+      var next = current === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('nxf_theme', next);
+    });
+  }
+
   // ── Header scroll effect ──────────────────────────────
   const header = document.getElementById('header');
   let lastY = 0;
