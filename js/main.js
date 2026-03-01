@@ -93,6 +93,53 @@
     });
   }
 
+  // ── Parallax hero glow on mouse move ──────────────────
+  var heroSection = document.querySelector('.hero');
+  if (heroSection) {
+    heroSection.addEventListener('mousemove', function (e) {
+      var rect = heroSection.getBoundingClientRect();
+      var x = (e.clientX - rect.left) / rect.width - 0.5;
+      var y = (e.clientY - rect.top) / rect.height - 0.5;
+      var glow1 = heroSection.querySelector('.hero__glow--1');
+      var glow2 = heroSection.querySelector('.hero__glow--2');
+      if (glow1) glow1.style.transform = 'translateX(calc(-50% + ' + (x * 30) + 'px)) translateY(' + (y * 20) + 'px)';
+      if (glow2) glow2.style.transform = 'translateX(' + (x * -20) + 'px) translateY(' + (y * -15) + 'px)';
+    });
+  }
+
+  // ── Stagger hero stat shimmer indices ─────────────────
+  document.querySelectorAll('.hero__stat-value').forEach(function (el, i) {
+    el.style.setProperty('--i', i);
+  });
+
+  // ── Subtle parallax on scroll for hero grid ───────────
+  var heroGrid = document.querySelector('.hero__grid');
+  if (heroGrid) {
+    window.addEventListener('scroll', function () {
+      var y = window.scrollY;
+      if (y < window.innerHeight) {
+        heroGrid.style.transform = 'translateY(' + (y * 0.15) + 'px)';
+      }
+    }, { passive: true });
+  }
+
+  // ── Trigger privacy flow line animation on scroll ─────
+  var privacyFlow = document.querySelector('.privacy__flow');
+  if (privacyFlow && 'IntersectionObserver' in window) {
+    var privacyObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('aos-triggered');
+            privacyObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    privacyObserver.observe(privacyFlow);
+  }
+
   // ── Active nav link highlighting ──────────────────────
   var sections = document.querySelectorAll('section[id]');
   var navAnchors = document.querySelectorAll('.nav__links a');
