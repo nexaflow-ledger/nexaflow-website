@@ -89,7 +89,6 @@
 /* ── Exchange Promo Banner ─────────────────────────────── */
 .exchange-banner {
   position: relative;
-  overflow: hidden;
   margin-top: 64px;     /* push below fixed header */
   background: linear-gradient(135deg, rgba(124, 58, 237, .15) 0%, rgba(167, 139, 250, .08) 50%, rgba(96, 165, 250, .12) 100%);
   border-bottom: 1px solid var(--accent-dim);
@@ -172,7 +171,7 @@
   .exchange-banner__inner {
     flex-direction: column;
     text-align: center;
-    padding-top: 5rem;
+    padding-top: 1.5rem;
     padding-bottom: 1.5rem;
   }
   .exchange-banner__cta {
