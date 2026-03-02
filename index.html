@@ -5,12 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NexaFlow — Privacy-First Cryptocurrency</title>
   <meta name="description" content="NexaFlow is a next-generation cryptocurrency with confidential transactions, ring signatures, and stealth addresses. Built for privacy, speed, and real-world use." />
-  <meta name="keywords" content="NexaFlow, cryptocurrency, privacy coin, confidential transactions, ring signatures, stealth addresses, blockchain, NXF" />
+  <meta name="keywords" content="NexaFlow, NXF, cryptocurrency, privacy coin, confidential transactions, ring signatures, stealth addresses, blockchain, crypto exchange, private payments, decentralized finance, DeFi, staking, BFT consensus" />
+  <link rel="canonical" href="https://nfledger.com/" />
+
+  <!-- Open Graph -->
   <meta property="og:title" content="NexaFlow — Privacy-First Cryptocurrency" />
   <meta property="og:description" content="Scalable, private, and secure digital currency with sub-5s finality and enterprise-grade cryptography." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/og-image.png" />
+  <meta property="og:url" content="https://nfledger.com/" />
+  <meta property="og:image" content="https://nfledger.com/assets/HD_logo_2048.png" />
+  <meta property="og:image:width" content="2048" />
+  <meta property="og:image:height" content="2048" />
+  <meta property="og:image:alt" content="NexaFlow logo" />
+  <meta property="og:site_name" content="NexaFlow" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="NexaFlow — Privacy-First Cryptocurrency" />
+  <meta name="twitter:description" content="Scalable, private, and secure digital currency with sub-5s finality and enterprise-grade cryptography." />
+  <meta name="twitter:image" content="https://nfledger.com/assets/HD_logo_2048.png" />
+  <meta name="twitter:image:alt" content="NexaFlow logo" />
+
+  <!-- Additional SEO -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="author" content="NexaFlow Contributors" />
+  <meta name="theme-color" content="#09090b" />
   <link rel="icon" href="assets/HD_logo_2048.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/HD_logo_2048.png" />
+  <link rel="dns-prefetch" href="https://exchange.nfledger.com" />
+  <link rel="preconnect" href="https://exchange.nfledger.com" />
   <link rel="stylesheet" href="css/style.css" />
   <script>
     // Apply saved theme immediately to prevent flash
@@ -743,6 +767,63 @@ curl -X POST http://localhost:8080/tx/payment \
       <p>&copy; 2026 NexaFlow Contributors. Open-source under the MIT License.</p>
     </div>
   </footer>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://nfledger.com/#organization",
+        "name": "NexaFlow",
+        "url": "https://nfledger.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://nfledger.com/assets/HD_logo_2048.png",
+          "width": 2048,
+          "height": 2048
+        },
+        "sameAs": [
+          "https://github.com/nexaflow-ledger",
+          "https://discord.gg/s4A9Da7WmV",
+          "https://exchange.nfledger.com"
+        ],
+        "description": "NexaFlow is a next-generation privacy-first cryptocurrency with confidential transactions, ring signatures, and stealth addresses."
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://nfledger.com/#website",
+        "url": "https://nfledger.com",
+        "name": "NexaFlow",
+        "publisher": { "@id": "https://nfledger.com/#organization" },
+        "description": "Privacy-first cryptocurrency with confidential transactions, ring signatures, and instant finality."
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://nfledger.com/#webpage",
+        "url": "https://nfledger.com",
+        "name": "NexaFlow — Privacy-First Cryptocurrency",
+        "isPartOf": { "@id": "https://nfledger.com/#website" },
+        "about": { "@id": "https://nfledger.com/#organization" },
+        "description": "NexaFlow is a next-generation cryptocurrency with confidential transactions, ring signatures, and stealth addresses. Built for privacy, speed, and real-world use."
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "NexaFlow Exchange",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "url": "https://exchange.nfledger.com",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "description": "Trade NexaFlow (NXF) for Bitcoin on the official privacy-first crypto exchange."
+      }
+    ]
+  }
+  </script>
 
   <script src="js/main.js"></script>
 </body>

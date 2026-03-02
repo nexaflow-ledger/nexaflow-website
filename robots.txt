@@ -1,0 +1,5 @@
+# NexaFlow Website — robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://nfledger.com/sitemap.xml
