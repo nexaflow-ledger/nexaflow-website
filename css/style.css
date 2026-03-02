@@ -86,6 +86,110 @@
 [data-theme="light"] .hero__glow { opacity: .15; }
 [data-theme="light"] .hero__badge { border-color: rgba(124,58,237,.25); }
 
+/* ── Exchange Promo Banner ─────────────────────────────── */
+.exchange-banner {
+  position: relative;
+  overflow: hidden;
+  margin-top: 64px;     /* push below fixed header */
+  background: linear-gradient(135deg, rgba(124, 58, 237, .15) 0%, rgba(167, 139, 250, .08) 50%, rgba(96, 165, 250, .12) 100%);
+  border-bottom: 1px solid var(--accent-dim);
+}
+
+.exchange-banner__glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 120% at 20% 50%, rgba(167,139,250,.2), transparent 60%),
+              radial-gradient(ellipse 40% 100% at 80% 50%, rgba(96,165,250,.15), transparent 60%);
+  pointer-events: none;
+}
+
+.exchange-banner__inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.exchange-banner__content {
+  max-width: 700px;
+}
+
+.exchange-banner__badge {
+  display: inline-block;
+  padding: .25rem .75rem;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--accent-dim);
+  border-radius: 999px;
+  margin-bottom: .75rem;
+  animation: banner-pulse 2s ease-in-out infinite;
+}
+
+@keyframes banner-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(124, 58, 237, .5); }
+  50%      { box-shadow: 0 0 0 8px rgba(124, 58, 237, 0); }
+}
+
+.exchange-banner__title {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.2;
+  margin-bottom: .5rem;
+}
+
+.exchange-banner__text {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.exchange-banner__text strong {
+  color: var(--accent-bright);
+}
+
+.exchange-banner__cta {
+  flex-shrink: 0;
+  white-space: nowrap;
+  font-size: 1.05rem;
+  padding: .9rem 2rem;
+  box-shadow: 0 0 24px rgba(124, 58, 237, .35);
+  transition: transform .2s var(--ease), box-shadow .2s var(--ease);
+}
+
+.exchange-banner__cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 36px rgba(124, 58, 237, .5);
+}
+
+@media (max-width: 768px) {
+  .exchange-banner__inner {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 1.5rem;
+  }
+  .exchange-banner__cta {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+[data-theme="light"] .exchange-banner {
+  background: linear-gradient(135deg, rgba(124, 58, 237, .08) 0%, rgba(99, 102, 241, .06) 50%, rgba(37, 99, 235, .08) 100%);
+  border-bottom-color: rgba(124, 58, 237, .2);
+}
+
+[data-theme="light"] .exchange-banner__text strong {
+  color: var(--accent-dim);
+}
+
 /* ── Theme Toggle Button ──────────────────────────────── */
 .theme-toggle {
   background: none;
@@ -296,7 +400,7 @@ code { font-family: var(--font-mono); font-size: .9em; }
 /* ── Hero ──────────────────────────────────────────────── */
 .hero {
   position: relative;
-  padding: 10rem 0 6rem;
+  padding: 6rem 0 6rem;
   overflow: hidden;
   text-align: center;
 }
