@@ -58,6 +58,7 @@
         <li><a href="#privacy">Privacy</a></li>
         <li><a href="#tokenomics">Tokenomics</a></li>
         <li><a href="#staking">Staking</a></li>
+        <li><a href="#micro-coins">Micro Coins</a></li>
         <li><a href="#technology">Technology</a></li>
         <li><a href="#get-started">Get Started</a></li>
       </ul>
@@ -450,6 +451,90 @@
       </div>
     </section>
 
+    <!-- ════════════ PROGRAMMABLE MICRO COINS ════════════ -->
+    <section class="section pmc" id="micro-coins">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__tag">Programmable Micro Coins</span>
+          <h2 class="section__title">Create your own token</h2>
+          <p class="section__subtitle">
+            Launch lightweight, programmable tokens on the NexaFlow ledger.
+            Each micro coin has its own Proof-of-Work mining, programmable transfer rules,
+            and built-in cross-trading &mdash; no smart contracts required.
+          </p>
+        </div>
+
+        <div class="pmc__grid">
+
+          <div class="pmc__card" data-aos>
+            <div class="pmc__card-icon pmc__card-icon--orange">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <h3>PoW Minting</h3>
+            <p>New supply is mined by solving a BLAKE2b-256 hash puzzle. Difficulty auto-adjusts, and higher difficulty yields exponentially larger block rewards &mdash; making the creator&rsquo;s difficulty choice a core economic lever.</p>
+          </div>
+
+          <div class="pmc__card" data-aos>
+            <div class="pmc__card-icon pmc__card-icon--purple">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <h3>Programmable Rules</h3>
+            <p>Attach rules that govern every aspect of your coin: max balances, transfer cooldowns, royalty-on-transfer, whitelists, blacklists, time-locks, expiry, and more &mdash; all enforced on-ledger.</p>
+          </div>
+
+          <div class="pmc__card" data-aos>
+            <div class="pmc__card-icon pmc__card-icon--teal">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+            </div>
+            <h3>Built-in DEX</h3>
+            <p>Holders post buy/sell offers against NXF or other micro coins. All trades settle atomically on-ledger &mdash; trustless, instant, and with no middleman.</p>
+          </div>
+
+          <div class="pmc__card" data-aos>
+            <div class="pmc__card-icon pmc__card-icon--green">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3>Micro-Transaction Optimised</h3>
+            <p>8-decimal precision enables sub-cent denominations and batched transfers. Perfect for reward points, in-game currencies, community tokens, and tipping systems.</p>
+          </div>
+
+        </div>
+
+        <div class="pmc__tx-types">
+          <h3>Transaction Types</h3>
+          <div class="pmc__tx-grid">
+            <div class="pmc__tx"><code>60</code><span>PMCCreate</span><small>Define a new micro coin with symbol, supply cap, PoW difficulty, flags, and rules</small></div>
+            <div class="pmc__tx"><code>61</code><span>PMCMint</span><small>Submit a PoW nonce to mine new supply</small></div>
+            <div class="pmc__tx"><code>62</code><span>PMCTransfer</span><small>Send coins between accounts (subject to programmable rules)</small></div>
+            <div class="pmc__tx"><code>63</code><span>PMCBurn</span><small>Permanently destroy supply</small></div>
+            <div class="pmc__tx"><code>64</code><span>PMCSetRules</span><small>Update programmable rules (issuer only)</small></div>
+            <div class="pmc__tx"><code>65</code><span>PMCOfferCreate</span><small>Post a buy or sell offer on the DEX</small></div>
+            <div class="pmc__tx"><code>66</code><span>PMCOfferAccept</span><small>Accept (fill) an existing offer</small></div>
+            <div class="pmc__tx"><code>67</code><span>PMCOfferCancel</span><small>Cancel an open offer</small></div>
+          </div>
+        </div>
+
+        <div class="pmc__flags">
+          <h3>Coin Flags</h3>
+          <div class="pmc__flags-list">
+            <span class="pmc__flag">TRANSFERABLE</span>
+            <span class="pmc__flag">BURNABLE</span>
+            <span class="pmc__flag">MINTABLE</span>
+            <span class="pmc__flag">FREEZABLE</span>
+            <span class="pmc__flag">ROYALTY_ON_XFER</span>
+            <span class="pmc__flag">WHITELIST_ONLY</span>
+            <span class="pmc__flag">CROSS_TRADEABLE</span>
+            <span class="pmc__flag">EXPIRABLE</span>
+          </div>
+          <p class="pmc__flags-note">
+            Mix and match flags when creating a coin to control transferability, minting,
+            freezing, royalties, whitelisting, DEX listing, and balance expiry.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
     <!-- ════════════ TECHNOLOGY ════════════ -->
     <section class="section technology" id="technology">
       <div class="container">
@@ -740,6 +825,7 @@ curl -X POST http://localhost:8080/tx/payment \
             <li><a href="#privacy">Privacy</a></li>
             <li><a href="#tokenomics">Tokenomics</a></li>
             <li><a href="#staking">Staking</a></li>
+            <li><a href="#micro-coins">Micro Coins</a></li>
           </ul>
         </div>
         <div class="footer__col">

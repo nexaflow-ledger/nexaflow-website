@@ -852,6 +852,137 @@ code { font-family: var(--font-mono); font-size: .9em; }
   line-height: 1.6;
 }
 
+/* ── Programmable Micro Coins ──────────────────────────── */
+.pmc__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.pmc__card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: border-color .3s var(--ease), transform .3s var(--ease), box-shadow .3s var(--ease);
+}
+.pmc__card:hover {
+  border-color: var(--border-light);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,.35), 0 0 0 1px rgba(167,139,250,.08);
+}
+.pmc__card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: .5rem;
+}
+.pmc__card p {
+  color: var(--text-muted);
+  font-size: .9rem;
+  line-height: 1.6;
+}
+
+.pmc__card-icon {
+  width: 48px; height: 48px;
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 1.25rem;
+}
+.pmc__card-icon--purple { background: rgba(167,139,250,.12); color: var(--purple); }
+.pmc__card-icon--orange { background: rgba(251,146,60,.12);  color: var(--orange); }
+.pmc__card-icon--teal   { background: rgba(45,212,191,.12);  color: var(--teal); }
+.pmc__card-icon--green  { background: rgba(52,211,153,.12);  color: var(--green); }
+
+/* Transaction types table */
+.pmc__tx-types {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+.pmc__tx-types h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+.pmc__tx-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: .75rem;
+}
+.pmc__tx {
+  display: flex;
+  align-items: baseline;
+  gap: .75rem;
+  padding: .6rem .75rem;
+  border-radius: 8px;
+  background: var(--bg);
+  transition: background .2s;
+}
+.pmc__tx:hover { background: rgba(167,139,250,.06); }
+.pmc__tx code {
+  flex-shrink: 0;
+  font-size: .75rem;
+  font-weight: 700;
+  color: var(--accent);
+  background: rgba(167,139,250,.1);
+  padding: .15rem .5rem;
+  border-radius: 6px;
+}
+.pmc__tx span {
+  font-weight: 600;
+  font-size: .9rem;
+  white-space: nowrap;
+}
+.pmc__tx small {
+  color: var(--text-dim);
+  font-size: .8rem;
+  margin-left: auto;
+}
+
+/* Flags pills */
+.pmc__flags {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+}
+.pmc__flags h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.pmc__flags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-bottom: 1rem;
+}
+.pmc__flag {
+  display: inline-block;
+  padding: .3rem .85rem;
+  background: rgba(167,139,250,.08);
+  border: 1px solid rgba(167,139,250,.18);
+  border-radius: 100px;
+  font-size: .78rem;
+  font-weight: 600;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: .03em;
+  color: var(--text-muted);
+  transition: background .2s, border-color .2s;
+}
+.pmc__flag:hover {
+  background: rgba(167,139,250,.15);
+  border-color: rgba(167,139,250,.3);
+}
+.pmc__flags-note {
+  font-size: .85rem;
+  color: var(--text-dim);
+  line-height: 1.55;
+}
+
 /* ── Technology Grid ───────────────────────────────────── */
 .tech__grid {
   display: grid;
