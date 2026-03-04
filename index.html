@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NexaFlow — Privacy-First Cryptocurrency</title>
-  <meta name="description" content="NexaFlow is a next-generation cryptocurrency with confidential transactions, ring signatures, and stealth addresses. Built for privacy, speed, and real-world use." />
+  <title>NexaFlow (NXF) — Privacy-First Crypto | ICO Live March 31, 2026</title>
+  <meta name="description" content="NexaFlow is the next-gen privacy cryptocurrency with confidential transactions &amp; ring signatures. Buy NXF at 1 sat in the upcoming ICO — create your account now before launch." />
   <meta name="keywords" content="NexaFlow, NXF, cryptocurrency, privacy coin, confidential transactions, ring signatures, stealth addresses, blockchain, crypto exchange, private payments, decentralized finance, DeFi, staking, BFT consensus" />
   <link rel="canonical" href="https://nfledger.com/" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="NexaFlow — Privacy-First Cryptocurrency" />
-  <meta property="og:description" content="Scalable, private, and secure digital currency with sub-5s finality and enterprise-grade cryptography." />
+  <meta property="og:title" content="NexaFlow (NXF) — Privacy-First Crypto | ICO March 31" />
+  <meta property="og:description" content="Next-gen privacy cryptocurrency with confidential transactions &amp; ring signatures. ICO launching at 1 sat/NXF — sign up now." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://nfledger.com/" />
   <meta property="og:image" content="https://nfledger.com/assets/HD_logo_2048.png" />
@@ -22,8 +22,8 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="NexaFlow — Privacy-First Cryptocurrency" />
-  <meta name="twitter:description" content="Scalable, private, and secure digital currency with sub-5s finality and enterprise-grade cryptography." />
+  <meta name="twitter:title" content="NexaFlow (NXF) — Privacy-First Crypto | ICO March 31" />
+  <meta name="twitter:description" content="Next-gen privacy cryptocurrency with confidential transactions &amp; ring signatures. ICO launching at 1 sat/NXF — sign up now." />
   <meta name="twitter:image" content="https://nfledger.com/assets/HD_logo_2048.png" />
   <meta name="twitter:image:alt" content="NexaFlow logo" />
 
@@ -948,16 +948,25 @@ curl -X POST http://localhost:8080/tx/payment \
         "url": "https://nfledger.com",
         "name": "NexaFlow",
         "publisher": { "@id": "https://nfledger.com/#organization" },
-        "description": "Privacy-first cryptocurrency with confidential transactions, ring signatures, and instant finality."
+        "description": "Privacy-first cryptocurrency with confidential transactions, ring signatures, and instant finality.",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://nfledger.com/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
       },
       {
         "@type": "WebPage",
         "@id": "https://nfledger.com/#webpage",
         "url": "https://nfledger.com",
-        "name": "NexaFlow — Privacy-First Cryptocurrency",
+        "name": "NexaFlow (NXF) — Privacy-First Crypto | ICO Live March 31, 2026",
         "isPartOf": { "@id": "https://nfledger.com/#website" },
         "about": { "@id": "https://nfledger.com/#organization" },
-        "description": "NexaFlow is a next-generation cryptocurrency with confidential transactions, ring signatures, and stealth addresses. Built for privacy, speed, and real-world use."
+        "description": "NexaFlow is a next-generation cryptocurrency with confidential transactions, ring signatures, and stealth addresses. Built for privacy, speed, and real-world use.",
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".hero__title", ".hero__sub"]
+        }
       },
       {
         "@type": "SoftwareApplication",
@@ -971,6 +980,82 @@ curl -X POST http://localhost:8080/tx/payment \
           "priceCurrency": "USD"
         },
         "description": "Trade NexaFlow (NXF) for Bitcoin on the official privacy-first crypto exchange."
+      },
+      {
+        "@type": "Event",
+        "name": "NexaFlow (NXF) Initial Coin Offering",
+        "description": "The official NexaFlow ICO launches at 1 satoshi per NXF. Create your account on the NexaFlow Exchange and be ready on day one.",
+        "startDate": "2026-03-31T12:00:00Z",
+        "endDate": "2026-06-30T23:59:59Z",
+        "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": {
+          "@type": "VirtualLocation",
+          "url": "https://exchange.nfledger.com"
+        },
+        "organizer": { "@id": "https://nfledger.com/#organization" },
+        "image": "https://nfledger.com/assets/HD_logo_2048.png",
+        "offers": {
+          "@type": "Offer",
+          "url": "https://exchange.nfledger.com",
+          "price": "0.00000001",
+          "priceCurrency": "BTC",
+          "availability": "https://schema.org/PreOrder",
+          "validFrom": "2026-03-04"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is NexaFlow (NXF)?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "NexaFlow is a next-generation privacy-first cryptocurrency that uses confidential transactions, ring signatures, and stealth addresses to keep your finances private. It features sub-5-second finality via BFT consensus and is fully open-source under the MIT license."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "When is the NexaFlow ICO?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The NexaFlow Initial Coin Offering launches on March 31, 2026 on the official NexaFlow Exchange at exchange.nfledger.com. The ICO price is 1 satoshi (0.00000001 BTC) per NXF token."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I buy NXF tokens?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Create a free account on the NexaFlow Exchange at exchange.nfledger.com, deposit Bitcoin to your wallet, and purchase NXF at the ICO price of 1 sat/NXF. After launch, you can also trade NXF/BTC on the order book."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What makes NexaFlow different from other privacy coins?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "NexaFlow combines Pedersen commitments for confidential transactions, ring signatures for sender anonymity, and stealth addresses for receiver privacy — all in one protocol. It also features BFT consensus with sub-5-second finality, built-in staking, an AMM DEX, and a DID identity layer."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is NexaFlow open source?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. NexaFlow is fully open-source under the MIT License. The source code, GUI wallet, and all tooling are available on GitHub at github.com/nexaflow-ledger."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the total supply of NXF?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The maximum supply of NXF is 100 billion tokens. Of this, 40% is allocated to the public ICO, 25% to staking rewards, 15% to the development fund, 10% to the founding team (vested over 3 years), and 10% to the community and ecosystem growth fund."
+            }
+          }
+        ]
       }
     ]
   }
