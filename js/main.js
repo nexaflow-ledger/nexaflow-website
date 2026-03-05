@@ -54,6 +54,89 @@
     });
   }
 
+  // ── Nav overflow "More" dropdown ──────────────────────
+  var navMore = document.getElementById('navMore');
+  var navMoreBtn = document.getElementById('navMoreBtn');
+  var navMoreMenu = document.getElementById('navMoreMenu');
+
+  function updateNavOverflow() {
+    if (!navLinks || !navMore || !navMoreMenu) return;
+    // On mobile (burger visible), skip overflow logic
+    if (burger && window.getComputedStyle(burger).display !== 'none') {
+      navMore.style.display = 'none';
+      var items = navLinks.querySelectorAll('li');
+      items.forEach(function (li) { li.style.display = ''; });
+      return;
+    }
+
+    // Reset: show all items, hide dropdown
+    var items = navLinks.querySelectorAll('li');
+    items.forEach(function (li) { li.style.display = ''; });
+    navMore.style.display = 'none';
+    navMoreMenu.innerHTML = '';
+
+    // Measure: does the nav overflow?
+    var nav = navLinks.closest('.nav');
+    var navRect = nav.getBoundingClientRect();
+    var actionsEl = document.querySelector('.nav__actions');
+    var logoEl = document.querySelector('.nav__logo');
+    var logoW = logoEl ? logoEl.getBoundingClientRect().width : 0;
+    var actionsW = actionsEl ? actionsEl.getBoundingClientRect().width : 0;
+    var moreW = 52; // approx width of "more" button + gap
+    var availableW = navRect.width - logoW - actionsW - moreW - 48; // 48 = extra breathing room
+
+    var totalLinksW = 0;
+    var overflowed = [];
+    items.forEach(function (li, i) {
+      totalLinksW += li.getBoundingClientRect().width + (i > 0 ? 28 : 0); // 28 ≈ gap
+      if (totalLinksW > availableW) {
+        overflowed.push(li);
+      }
+    });
+
+    if (overflowed.length === 0) return;
+
+    // Show "More" button, hide overflowed items, clone them into dropdown
+    navMore.style.display = 'flex';
+    overflowed.forEach(function (li) {
+      li.style.display = 'none';
+      var clone = li.cloneNode(true);
+      clone.style.display = '';
+      navMoreMenu.appendChild(clone);
+    });
+  }
+
+  if (navMoreBtn && navMoreMenu) {
+    navMoreBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var isOpen = navMoreMenu.classList.toggle('open');
+      navMoreBtn.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close dropdown when a link inside is clicked
+    navMoreMenu.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') {
+        navMoreMenu.classList.remove('open');
+        navMoreBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Close dropdown on outside click
+    document.addEventListener('click', function () {
+      navMoreMenu.classList.remove('open');
+      navMoreBtn.setAttribute('aria-expanded', 'false');
+    });
+    navMore.addEventListener('click', function (e) { e.stopPropagation(); });
+  }
+
+  window.addEventListener('resize', updateNavOverflow);
+  // Run after fonts load for accurate measurements
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(updateNavOverflow);
+  } else {
+    updateNavOverflow();
+  }
+
   // ── Smooth scroll for anchor links ────────────────────
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
