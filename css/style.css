@@ -328,6 +328,9 @@ code { font-family: var(--font-mono); font-size: .9em; }
   display: flex;
   align-items: center;
   gap: 1.75rem;
+  margin-left: 1.5rem;
+  padding-left: 1.5rem;
+  border-left: 1px solid var(--border);
 }
 .nav__links a {
   font-size: .875rem;
@@ -343,6 +346,7 @@ code { font-family: var(--font-mono); font-size: .9em; }
   position: relative;
   display: flex;
   align-items: center;
+  margin-left: .75rem;
 }
 .nav__more-btn {
   display: flex;
